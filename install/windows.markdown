@@ -1,9 +1,13 @@
 ## Installing on Windows
 
-64-bit Windows 10.0.17763 or later is required to run WezTerm.  You can download
-a setup.exe style installer to guide the installation (requires admin privileges)
-or a simple zip file and manage the files for yourself (no special privileges
-required).
+64-bit Windows 10.0.17763 or later is required to run WezTerm; running on
+earlier versions of Windows is not possible, as WezTerm requires [Pseudo
+Console support that was first released in Windows
+10.0.17763](https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/).
+
+You can download a setup.exe style installer to guide the installation
+(requires admin privileges) or a simple zip file and manage the files for
+yourself (no special privileges required).
 
 <a href="{{ windows_exe_stable }}" class="btn">Windows (setup.exe)</a>
 <a href="{{ windows_exe_nightly }}" class="btn">Nightly Windows (setup.exe)</a>
@@ -39,3 +43,11 @@ scoop bucket add extras
 scoop install wezterm
 ```
 
+### For `Chocolatey` users
+
+If you prefer to use [Chocolatey](https://chocolatey.org) to manage software, wezterm is availabe from the Community Repository.
+It can be installed like so:
+
+```bash
+choco install wezterm -y
+```
